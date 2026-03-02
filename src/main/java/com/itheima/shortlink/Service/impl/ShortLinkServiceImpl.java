@@ -23,6 +23,7 @@ public class ShortLinkServiceImpl implements ShortLinkService {
     @Autowired(required = false)
     private StringRedisTemplate stringRedisTemplate;
 
+
     @Override
     public ShortLink createShortLink(String longUrl) {
         String shortCode = ShortCodeGenerator.generate(longUrl);
